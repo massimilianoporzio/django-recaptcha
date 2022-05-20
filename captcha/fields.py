@@ -29,7 +29,7 @@ class ReCaptchaField(forms.CharField):
         JavaScript variables as specified in
         https://developers.google.com/recaptcha/docs/display#render_param
         """
-        super().__init__(*args, **kwargs)
+        super().__init__(*args)
 
         if not isinstance(self.widget, ReCaptchaBase):
             raise ImproperlyConfigured(
